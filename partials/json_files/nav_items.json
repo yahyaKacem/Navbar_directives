@@ -1,0 +1,37 @@
+[
+  {
+    "active":  "",
+    "tag":     "email",
+    "href":    "email",
+    "class":   "email",
+    "label":   "E-mail"
+  },
+  {
+    "active":  "",
+    "tag":     "url",
+    "href":    "url",
+    "class":   "url",
+    "label":   "Url"
+  },
+  {
+    "active":  "",
+    "href":    "btn",
+    "tag":     "button",
+    "class":   "button",
+    "label":   "Button"
+  },
+  {
+    "active":  "",
+    "tag":     "submit",
+    "href":    "submit",
+    "class":   "submit",
+    "label":   "Submit"
+  },
+  {
+    "active":  "",
+    "tag":     "reset",
+    "href":    "reset",
+    "class":   "reset",
+    "label":   "Reset"
+  }
+]
