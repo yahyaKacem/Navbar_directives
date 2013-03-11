@@ -1,48 +1,52 @@
-<!doctype html>
-<html ng-app="navbar_app">
-  <head>
-  <meta charset="utf-8">
-  <title>Navbar Tests</title>
-  <link
-    rel="stylesheet"
-    href="public/libs/bootstrap/css/bootstrap.css"
-  >
-  <link rel="stylesheet" href="public/styles/style.css">
-  <link
-    rel="stylesheet"
-    href="public/libs/bootstrap/css/bootstrap-responsive.css"
-  >
+<!DOCTYPE html>
+<html ng-app="navbar_test">
+  <head lang="en">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="public/libs/bootstrap/css/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="public/libs/bootstrap/css/bootstrap-responsive.css"
+    >
   </head>
   <body ng-controller="MainCtrl">
-    <header id="header" class="navbar">
-      <nav class="clearfix navbar-inner">
-        <a
-          class="brand"
-          href="#/home"
-        >
-          Navbar Tests
-        </a>
-        <ul class="nav" nav-bar>
-          <li
-            ng-repeat="nav_item in nav_items"
-            data-match-route="/{{nav_item.href}}"
-          >
-            <a href="#/{{nav_item.href}}">
-              {{nav_item.label}}
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <header class="well">
+      <div class="navbar" bs-navbar>
+        <div class="navbar-inner">
+          <ul class="nav">
+<!--################################################################-->
+<!--######################Dynamic navber############################-->
+            <li
+              ng-repeat="nav_item in nav_items"
+              data-match-route="/{{nav_item.href}}"
+            >
+                <a href="#/{{nav_item.href}}">{{nav_item.text}}</a>
+            </li>
+<!--################################################################-->
+<!--######################Static navbar#############################-->
+<!--            <li data-match-route="/home">
+              <a href="#/home">Home</a>
+            </li>
+            <li data-match-route="/custom_page">
+              <a href="#/custom_page">Custom Page</a>
+            </li>
+            <li data-match-route="/about">
+              <a href="#/about">About</a>
+            </li>-->
+<!--################################################################-->
+<!--################################################################-->
+          </ul>
+        </div>
+      </div>
     </header>
-    <section class="container well" ng-view></section>
-    <footer class="well text-center navbar-fixed-bottom">
-      &#169; Copyrights Stuff 2013 &#169;
-    </footer>
+    <section class="container well">
+      <ng-view></ng-view>
+    </section>
+    <footer class="well"></footer>
     <script src="public/libs/jquery/jquery.min.js"></script>
     <script src="public/libs/angular/angular.min.js"></script>
+    <script src="public/libs/underscore/underscore-min.js"></script>
+    <script src="public/libs/angular-strap/dist/angular-strap.min.js"></script>
     <script src="public/scripts/controllers.js"></script>
-    <script src="public/scripts/directives.js"></script>
     <script src="public/scripts/app.js"></script>
-    <script src="public/scripts/services.js"></script>
   </body>
 </html>

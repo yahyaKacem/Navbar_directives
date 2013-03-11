@@ -1,0 +1,10 @@
+{
+  "name": "azerty",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": null,
+    "bootstrap": null,
+    "underscore": null,
+    "angular-strap": null
+  }
+}
