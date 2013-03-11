@@ -14,7 +14,7 @@
   >
   </head>
   <body ng-controller="MainCtrl">
-    <header id="header" class="well navbar">
+    <header id="header" class="navbar">
       <nav class="clearfix navbar-inner">
         <a
           class="brand"
@@ -22,7 +22,16 @@
         >
           Navbar Tests
         </a>
-        <top-nav-bar></top-nav-bar>
+        <ul class="nav" nav-bar>
+          <li
+            ng-repeat="nav_item in nav_items"
+            data-match-route="/{{nav_item.href}}"
+          >
+            <a href="#/{{nav_item.href}}">
+              {{nav_item.label}}
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
     <section class="container well" ng-view></section>

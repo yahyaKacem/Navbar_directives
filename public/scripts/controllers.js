@@ -20,7 +20,6 @@ controllers.MainCtrl = function($scope, NavItems, $route){
 //###################START EmailCtrl######################################
 controllers.EmailCtrl = function($scope) {
   $scope.something = "email";
-  
 };
 //###################END EmailCtrl########################################
 //########################################################################

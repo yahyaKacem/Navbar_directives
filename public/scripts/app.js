@@ -24,9 +24,10 @@ app.config(function($routeProvider){
 });
 //########################################################################
 //######injecting the dependencies########################################
+directives.navBar.$inject    = ['$location'];
 controllers.MainCtrl.$inject = ['$scope', 'NavItems', '$route'];
 //########################################################################
 //######assigning the controllers to the application######################
-app.controller(controllers);
 app.directive(directives);
+app.controller(controllers);
 //########################################################################
